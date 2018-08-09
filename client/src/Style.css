@@ -1,0 +1,35 @@
+.studentimage{
+    object-fit: cover;
+    width:100%;
+    height:200px;
+}
+.getStudent{
+ border:6px solid gray;
+ box-shadow: 2px;
+ font-size: 12px;
+ color:white;
+ width:300px;
+ margin:20px;
+ background-color: rgb(21, 22, 22);
+}
+.remove-btn{
+    border:none;
+    background-color: white;
+}
+.studentList{
+width:380px;
+background-color: rgb(29, 25, 25);
+list-style-type: none;
+}
+
+.shopping-list{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+}
+.shopping-list li{
+list-style-type: none;
+
+}
+.list-group-item{
+background-color: black;
+}
