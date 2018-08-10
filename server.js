@@ -6,7 +6,7 @@ const students = require('./routes/api/students');
 
 const app=express();
 const path=require('path');
-
+const port=process.env.PORT||5000;
 
 //Body parser middleware
 app.use(bodyParser.json());
@@ -23,9 +23,10 @@ mongoose
 //use Routes
 app.use('/api/students',students);
 
+
+
 app.use(express.static(path.join(__dirname,'client','build')))
 app.get('*',(req, res) => res.sendFile(path.join(__dirname, 'client','build','index.html')));
 
-const port=process.env.PORT||5000;
 app.listen(port,()=>console.log('Server started on port ${port}'));
 

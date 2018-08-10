@@ -14,9 +14,6 @@ cloudinary.config({
 //Item Model
 const Student = require('../../models/student');
 
-//@route Get api/items
-//@desc Get All Items
-//@access Public
 
 //router.get('/',(req, res) => res.sendFile(path.join(__dirname, 'client','build','index.html')));
 
@@ -26,9 +23,6 @@ router.get('/',(req,res) => {
       });
   })
 
-// @route POST api/items
-// @desc Create a post
-// @access Public
 
 router.post('/', upload.single('selectedFile'), function(req, res) {
     console.log('test',req.body)
@@ -63,9 +57,6 @@ router.post('/', upload.single('selectedFile'), function(req, res) {
              });
   });
 
-//@route Delete api/items
-//@desc Create a Post
-//@access Public
 
 router.delete('/:id',(req,res)=>{
     Student.findById(req.params.id)
