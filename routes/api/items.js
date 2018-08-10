@@ -11,7 +11,8 @@ cloudinary.config({
     api_key: '182934113221599', 
     api_secret: 'hF_yZkYyrPePFoue_hY0pNFFYtw' 
   });
-  router.use(express.static(__dirname + "/public"));
+//   router.use(express.static(__dirname + "/public"));
+  //router.use(express.static(path.join(__dirname,'client','build')))
 
 //Item Model
 const Student = require('../../models/Item');
@@ -19,6 +20,8 @@ const Student = require('../../models/Item');
 //@route Get api/items
 //@desc Get All Items
 //@access Public
+
+//router.get('/',(req, res) => res.sendFile(path.join(__dirname, 'client','build','index.html')));
 
 router.get('/',(req,res) => {
     Student.find({}).then(doc => {      

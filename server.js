@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 
 const items=require('./routes/api/items');
 
+// routes.get('/',(req, res) => res.sendFile(path.join(__dirname, 'client','build','index.html')));
 
 const app=express();
 //Body parser middleware
