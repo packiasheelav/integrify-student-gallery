@@ -5,7 +5,6 @@ const router = express.Router();
 var multer = require("multer");
 let upload = multer({ dest: '../public/uploads' });
 const cloudinary = require("cloudinary");
-var path = require('path');;
 cloudinary.config({ 
     cloud_name: 'dletkhvs9', 
     api_key: '182934113221599', 

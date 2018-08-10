@@ -180,27 +180,7 @@ class ItemModal extends Component {
 
           <button>Post</button>
         </form>
-            {/* <Form onSubmit={this.onSubmit}>
-              <FormGroup>
-                <Label for="item">Item</Label>
-                <Input
-                  type="text"
-                  name="firstName"
-                  id="item"
-                  placeholder="Full Name"
-                  onChange={this.onChange}
-                />
-                <Input placeholder="Last Name"  name="lastName" onChange={this.onChange}/>
-                <Input  placeholder="Title"  name="lastName" onChange={this.onChange} />
-                <Input placeholder="Nationality"  name="title" onChange={this.onChange}/>
-                <Input placeholder="Skills" name="" onChange={this.onChange}/>
-                <Input placeholder="Why Software Developer" name="" onChange={this.onChange}/>
-                <Input placeholder="Long Term Vision"  name="" onChange={this.onChange}/>
-                <Button color="dark" style={{ marginTop: '2rem' }} block>
-                  Add Student
-                </Button>
-              </FormGroup>
-            </Form> */}
+     
           </ModalBody>
         </Modal>
       </div>
