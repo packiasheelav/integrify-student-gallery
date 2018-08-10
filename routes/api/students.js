@@ -1,7 +1,5 @@
 const express = require('express');
 const router = express.Router();
-
-
 var multer = require("multer");
 let upload = multer({ dest: '../public/uploads' });
 const cloudinary = require("cloudinary");
@@ -14,7 +12,7 @@ cloudinary.config({
   //router.use(express.static(path.join(__dirname,'client','build')))
 
 //Item Model
-const Student = require('../../models/Item');
+const Student = require('../../models/student');
 
 //@route Get api/items
 //@desc Get All Items

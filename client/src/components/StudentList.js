@@ -2,16 +2,16 @@ import React, { Component } from 'react';
 import { Container, ListGroup, ListGroupItem, Button } from 'reactstrap';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { connect } from 'react-redux';
-import { getItems, selectedStudent , deleteItem} from '../actions/itemActions';
+import { getStudents, selectedStudent , deleteItem} from '../actions/studentActions';
 import PropTypes from 'prop-types';
 import '../Style.css';
 
-class ShoppingList extends Component {
+class StudentList extends Component {
   state={
     showDetails:false
   }
   componentDidMount() {
-    this.props.getItems();
+    this.props.getStudents();
   }
 
   onDeleteClick = id => {
@@ -28,13 +28,13 @@ class ShoppingList extends Component {
   }
 
   render() {
-    const { items } = this.props.item;
-    console.log(this.state.showDetails);
+    const { students } = this.props.student;
+    console.log(this.props);
     return (
       <Container>
         <ListGroup>
           <TransitionGroup className="shopping-list">
-            {items.map(({ _id, src ,alt,firstName,lastName,nationality,whySofterDeveloper,longTermVision,skills}) => (
+            {students.map(({ _id, src ,alt,firstName,lastName,nationality,whySofterDeveloper,longTermVision,skills}) => (
               <CSSTransition key={_id} timeout={500} classNames="fade">
                 <ListGroupItem className='studentList'>
                   <div className="getStudent" onClick={()=>this.onSelectedStudent(_id)}>
@@ -65,17 +65,17 @@ class ShoppingList extends Component {
   }
 }
 
-ShoppingList.propTypes = {
-  getItems: PropTypes.func.isRequired,
-  item: PropTypes.object.isRequired
+StudentList.propTypes = {
+  getStudents: PropTypes.func.isRequired,
+  student: PropTypes.object.isRequired
 };
 
 const mapStateToProps = state => ({
-  item: state.item
+  student: state.student
 });
 
 export default connect(
   mapStateToProps,
-  { getItems, deleteItem, selectedStudent }
-)(ShoppingList);
+  { getStudents, deleteItem, selectedStudent }
+)(StudentList);
 

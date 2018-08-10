@@ -1,5 +1,5 @@
-export const GET_ITEMS = 'GET_ITEMS';
-export const ADD_ITEM = 'ADD_ITEM';
-export const DELETE_ITEM = 'DELETE_ITEM';
-export const ITEMS_LOADING = 'ITEMS_LOADING';
+export const GET_STUDENTS = 'GET_STUDENTS';
+export const ADD_STUDENT = 'ADD_STUDENT';
+export const DELETE_STUDENT = 'DELETE_STUDENT';
+export const STUDENTS_LOADING = 'STUDENTS_LOADING';
 export const SELECTED_STUDENT = 'SELECTED_STUDENT';

@@ -4,15 +4,11 @@ import {
   Modal,
   ModalHeader,
   ModalBody,
-  Form,
-  FormGroup,
-  Label,
-  Input
 } from 'reactstrap';
 import { connect } from 'react-redux';
-import { addItem } from '../actions/itemActions';
+import { addStudent } from '../actions/studentActions';
 
-class ItemModal extends Component {
+class StudentModal extends Component {
   state = {
     modal: false,
     firstName: "",
@@ -53,7 +49,7 @@ class ItemModal extends Component {
       console.log('name', name)
       formData.append(name,data[name]);
     }
-    this.props.addItem(formData);
+    this.props.addStudent(formData);
 
     // Close modal
     this.toggle();
@@ -73,7 +69,7 @@ class ItemModal extends Component {
         <Modal isOpen={this.state.modal} toggle={this.toggle}>
           <ModalHeader toggle={this.toggle}>Add To Shopping List</ModalHeader>
           <ModalBody>
-          <form onSubmit={this.onSubmit} action="/api/items" method="POST" encType='multipart/form-data'>
+          <form onSubmit={this.onSubmit} action="/api/students" method="POST" encType='multipart/form-data'>
           <input
             name="firstName"
             onChange={this.onChange}
@@ -177,10 +173,8 @@ class ItemModal extends Component {
           <br />
           <br />
           <br />
-
           <button>Post</button>
-        </form>
-     
+         </form>
           </ModalBody>
         </Modal>
       </div>
@@ -189,10 +183,10 @@ class ItemModal extends Component {
 }
 
 const mapStateToProps = state => ({
-  item: state.item
+  students: state.student
 });
 
 export default connect(
   mapStateToProps,
-  { addItem }
-)(ItemModal);
+  { addStudent }
+)(StudentModal);

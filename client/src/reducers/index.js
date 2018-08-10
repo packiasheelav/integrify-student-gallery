@@ -1,5 +1,5 @@
 import {combineReducers} from 'redux';
-import itemReducer from './itemReducer';
+import studentReducer from './studentReducer';
 export default combineReducers({
-    item:itemReducer
+    student:studentReducer
 })

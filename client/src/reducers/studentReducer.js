@@ -1,37 +1,35 @@
 import {
-    GET_ITEMS,
-    ADD_ITEM,
-    DELETE_ITEM,
-    ITEMS_LOADING,
+  GET_STUDENTS,
+    ADD_STUDENT,
+    DELETE_STUDENT,
+    STUDENTS_LOADING,
     SELECTED_STUDENT
   } from '../actions/types';
-  import uuid from 'uuid';
   
   const initialState = {
-    items: [ ],
+    students: [ ],
     loading: false,
-    showDetails:false
   };
   
   export default function(state = initialState, action) {
     switch (action.type) {
-      case GET_ITEMS:
+      case GET_STUDENTS:
         return {
           ...state,
-          items: action.payload,
+          students: action.payload,
           loading: false
         };
-      case DELETE_ITEM:
+      case DELETE_STUDENT:
         return {
           ...state,
-          items: state.items.filter(item => item._id !== action.payload)
+          students: state.students.filter(item => item._id !== action.payload)
         };
-      case ADD_ITEM:
+      case ADD_STUDENT:
         return {
           ...state,
-          items: [action.payload, ...state.items]
+          students: [action.payload, ...state.students]
         };
-      case ITEMS_LOADING:
+      case STUDENTS_LOADING:
         return {
           ...state,
           loading: true
@@ -39,8 +37,7 @@ import {
         case SELECTED_STUDENT:
         return {
           ...state,
-          items: state.items.filter(item => item._id === action.payload),
-          showDetails: true
+          students: state.students.filter(item => item._id === action.payload),
         };
       default:
         return state;
