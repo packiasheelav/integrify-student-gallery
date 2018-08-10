@@ -5,7 +5,8 @@
   "main": "server.js",
   "engines": {
     "node": "8.11.1",
-    "npm": "5.6.0"
+    "npm": "5.6.0",
+    "yarn": "0.28.4"
   },
   "scripts": {
     "client-install": "npm install --prefix client",
