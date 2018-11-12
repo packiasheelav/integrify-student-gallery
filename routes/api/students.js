@@ -8,10 +8,10 @@ cloudinary.config({
     api_key: '182934113221599', 
     api_secret: 'hF_yZkYyrPePFoue_hY0pNFFYtw' 
   });
-//   router.use(express.static(__dirname + "/public"));
-  //router.use(express.static(path.join(__dirname,'client','build')))
+  router.use(express.static(__dirname + "/public"));
+  router.use(express.static(path.join(__dirname,'client','build')))
 
-//Item Model
+//student Model
 const Student = require('../../models/student');
 
 
