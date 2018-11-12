@@ -22,7 +22,7 @@ import {
       case DELETE_STUDENT:
         return {
           ...state,
-          students: state.students.filter(item => item._id !== action.payload)
+          students: state.students.filter(student => student._id !== action.payload)
         };
       case ADD_STUDENT:
         return {
@@ -37,7 +37,7 @@ import {
         case SELECTED_STUDENT:
         return {
           ...state,
-          students: state.students.filter(item => item._id === action.payload),
+          students: state.students.filter(student => student._id === action.payload),
         };
       default:
         return state;

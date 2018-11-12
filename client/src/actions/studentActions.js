@@ -11,8 +11,8 @@ export const getStudents = () => dispatch => {
   );
 };
 
-export const addStudent = item => dispatch => {
-  axios.post('/api/students', item).then(res =>
+export const addStudent = student => dispatch => {
+  axios.post('/api/students', student).then(res =>
     dispatch({
       type: ADD_STUDENT,
       payload: res.data
