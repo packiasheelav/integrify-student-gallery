@@ -15,7 +15,7 @@ cloudinary.config({
 const Student = require('../../models/student');
 
 
-//router.get('/',(req, res) => res.sendFile(path.join(__dirname, 'client','build','index.html')));
+router.get('/',(req, res) => res.sendFile(path.join(__dirname, 'client','build','index.html')));
 
 router.get('/',(req,res) => {
     Student.find({}).then(doc => {      
