@@ -51,7 +51,6 @@ Request body
 "favoriteQuote": "It will take time, but it will happen",
 "joinedOn": "22-1-2017"
 }
-response :{message: "Places Created"}
 ```
 
 Read entry 
@@ -92,7 +91,6 @@ Request body
 "_id": "5b67fe969126bc59ac8bf939"
 }
 
-response :{message: "Place Deleted"}
 ```
 
 Build with:
